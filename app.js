@@ -46,7 +46,7 @@ function handleTurn() {
    turn = 'X' 
    };
  
-const squares = Array.from(document.querySelectorAll('#board div'));
+
 const messages = document.querySelector('h2');
 function render () {
     board.forEach(function(val, idx) {
