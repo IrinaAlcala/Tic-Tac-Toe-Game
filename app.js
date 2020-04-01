@@ -1,5 +1,4 @@
 let board;
-let turn = 'X';
 document.getElementById('board').addEventListener('click',handleTurn);
  {
    let idx = squares.findIndex(function(square) {
@@ -41,9 +40,12 @@ function handleTurn() {
     });
     board[idx] = turn;
 
-    turn = turn === 'X' ? 'O' : 'X';
-    render();
-};
+    if (turn === 'X') {
+   turn = 'O' 
+   } else {
+   turn = 'X' 
+   };
+ 
 const squares = Array.from(document.querySelectorAll('#board div'));
 const messages = document.querySelector('h2');
 function render () {
@@ -52,8 +54,7 @@ function render () {
     });
     messages. textContent = `${turn} turn!`;
 };
-let board;
-let turn = 'X';
+
 let win;
 win = board[0] && board[0] === board[1] && board [0] 
 === board[2] ?
